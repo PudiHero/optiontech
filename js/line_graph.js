@@ -245,7 +245,7 @@ window.addEventListener('resize', function () {
 
 //ML
 function load_json_ml(x) {
-    var url = "/json/RF.json";
+    var url = "//json/RF.json";
     var request = new XMLHttpRequest();
     request.open("get", url);
     request.send(null);
@@ -257,7 +257,7 @@ function load_json_ml(x) {
             var len_json = Object.keys(json).length; //宣告json長度
             var list_x = [];
             var list_y = [];
-            
+
             for(var i=0;i<x.length;i++){
                 list_y.push(0)
                 for(var j=0;j<len_json;j++){
@@ -269,12 +269,12 @@ function load_json_ml(x) {
             }
 
             lineChart_rf_1.data.labels = x;
-            lineChart_rf_1.data.datasets[0].data = list_y;           
+            lineChart_rf_1.data.datasets[0].data = list_y;
             //lineChart_rf_1.data.datasets[1].data = list_y;
-           
+
             lineChart_rf_1.update();//使線圖可以即時更新
             lineChart_rf_1.resize();//重設線圖
-           
+
         };
     };
 }
